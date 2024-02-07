@@ -1,5 +1,7 @@
 # Semantic-segmentation-framework
 This framework is a general framework for novices. You can use this framework to train your own models to apply different tasks.
+###If you want to apply the MFFNet model, consider citing our article.
+https://www.mdpi.com/2591822
 ## 1.Start using
 You only need to download the entire zip file and extract it to your own device, and open the project configuration environment through pycharm to apply it.
 
