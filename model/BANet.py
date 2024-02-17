@@ -590,3 +590,12 @@ class BANet(nn.Module):
                 wd_params += child_wd_params
                 nowd_params += child_nowd_params
         return wd_params, nowd_params, lr_mul_wd_params, lr_mul_nowd_params
+if __name__ == "__main__":
+    from thop import profile
+    import torch
+
+    model = BANet().to("cuda")
+    input = torch.randn(1, 3, 512, 512).to("cuda")
+    flops, params = profile(model, inputs=(input,))
+
+    print(f"FLOPS: {flops}, Params: {params}")

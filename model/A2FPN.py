@@ -277,3 +277,13 @@ class A2FPN(nn.Module):
         out = F.interpolate(out, scale_factor=4, mode='bilinear', align_corners=True)
 
         return out
+
+if __name__ == "__main__":
+    from thop import profile
+    import torch
+
+    model = A2FPN().to("cuda")
+    input = torch.randn(1, 3, 512, 512).to("cuda")
+    flops, params = profile(model, inputs=(input,))
+
+    print(f"FLOPS: {flops}, Params: {params}")

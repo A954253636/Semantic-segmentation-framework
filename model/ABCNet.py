@@ -330,13 +330,11 @@ class ABCNet(nn.Module):
 
 
 if __name__ == "__main__":
-    net = ABCNet(3, 19)
-    net.cuda()
-    net.train()
-    in_ten = torch.randn(4, 3, 512, 512).cuda()
-    out = net(in_ten)
-    print(out[0].shape)
-    # print(out16.shape)
-    # print(out32.shape)
+    from thop import profile
+    import torch
 
-    net.get_params()
+    model = ABCNet().to("cuda")
+    input = torch.randn(1, 3, 512, 512).to("cuda")
+    flops, params = profile(model, inputs=(input,))
+
+    print(f"FLOPS: {flops}, Params: {params}")
