@@ -4,6 +4,15 @@ This framework is a general framework for novices. You can use this framework to
 ### If you want to apply the MFFNet model, consider citing our article. Thanks for the quote.
 https://www.mdpi.com/2591822
 
+### If you want to get the same results and the same data processing as us, please use the following sharing.
+链接：https://pan.baidu.com/s/1jVB3DmF9iKrXr8PRN_Ln4A?pwd=oy3s 
+提取码：oy3s 
+--来自百度网盘超级会员V3的分享
+
+链接：https://pan.baidu.com/s/15BCCz2nstfZqVDGsJVee6A?pwd=krvy 
+提取码：krvy 
+--来自百度网盘超级会员V3的分享
+
 ## 1.Start using
 You only need to download the entire zip file and extract it to your own device, and open the project configuration environment through pycharm to apply it.
 
